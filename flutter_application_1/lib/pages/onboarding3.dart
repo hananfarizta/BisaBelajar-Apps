@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/welcome.dart';
 import 'package:flutter_application_1/theme.dart';
 
 class OnBoarding3 extends StatelessWidget {
@@ -84,26 +85,30 @@ class OnBoarding3 extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: ElevatedButton(
-              child: Text(
-                'Get Started',
-                style: whiteSBTextStyle.copyWith(fontSize: 18),
-              ),
-              onPressed: () {
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.pressed)) return greenColor;
-                  return cyanColor;
+            child: SizedBox(
+              height: 46,
+              child: ElevatedButton(
+                child: Text(
+                  'Get Started',
+                  style: whiteSBTextStyle.copyWith(fontSize: 18),
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Welcome()));
                 },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed)) return greenColor;
+                    return cyanColor;
+                  },
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                ),
+              )
               ),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-    )
-  )
-            ),
+              ),
             ),
           ),
         ],),
