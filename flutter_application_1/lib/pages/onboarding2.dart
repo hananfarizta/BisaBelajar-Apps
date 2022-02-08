@@ -85,27 +85,30 @@ class OnBoarding2 extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: ElevatedButton(
-              child: Text(
-                'Next',
-                style: whiteSBTextStyle.copyWith(fontSize: 18),
-              ),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoarding3()));
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.pressed)) return greenColor;
-                  return cyanColor;
+            child: SizedBox(
+              height: 46,
+              child: ElevatedButton(
+                child: Text(
+                  'Next',
+                  style: whiteSBTextStyle.copyWith(fontSize: 18),
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnBoarding3()));
                 },
-              ),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                  (Set<MaterialState> states) {
+                    if (states.contains(MaterialState.pressed)) return greenColor;
+                    return cyanColor;
+                  },
+                ),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
     )
   )
-            ),
+              ),
+              ),
             ),
           ),
           SizedBox(
