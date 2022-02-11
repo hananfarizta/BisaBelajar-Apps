@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/berita.dart';
+import 'package:flutter_application_1/pages/onboarding3.dart';
+import 'package:flutter_application_1/pages/sign_in.dart';
+import 'package:flutter_application_1/pages/welcome.dart';
 import 'package:flutter_application_1/theme.dart';
 
 class Home extends StatefulWidget {
@@ -87,67 +91,72 @@ class _HomeState extends State<Home> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Card(
-                child: Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage('assets/home1.png'))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20, top: 97, right: 20),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Manfaat mengerti sisi anak',
-                                style: whiteSBTextStyle.copyWith(fontSize: 16),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Row(
-                                    children: [
-                                      Image.asset(
-                                        'assets/yayasan peduli anak.png',
-                                        width: 15,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'Yayasan Peduli Anak',
-                                        style: cyanM2TextStyle.copyWith(fontSize: 11),
-                                      )
-                                    ],
-                                  ),
-                                  Row(
-                                    children: [
-                                      Image.asset('assets/bulat2.png',
-                                      width: 12,),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset('assets/bulat2.png',
-                                      color: whiteColor,
-                                      width: 12,),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset('assets/bulat2.png',
-                                      color: whiteColor,
-                                      width: 12,),
-                                    ],
-                                  )
-                                ],
-                              )
-                            ],
+              child: InkWell(
+                onTap:() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Berita()));
+                },
+                child: Card(
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/home1.png'))),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 20, top: 97, right: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Manfaat mengerti sisi anak',
+                                  style: whiteSBTextStyle.copyWith(fontSize: 16),
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                          'assets/yayasan peduli anak.png',
+                                          width: 15,
+                                        ),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Text(
+                                          'Yayasan Peduli Anak',
+                                          style: cyanM2TextStyle.copyWith(fontSize: 11),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset('assets/bulat2.png',
+                                        width: 12,),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/bulat2.png',
+                                        color: whiteColor,
+                                        width: 12,),
+                                        SizedBox(
+                                          width: 5,
+                                        ),
+                                        Image.asset('assets/bulat2.png',
+                                        color: whiteColor,
+                                        width: 12,),
+                                      ],
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
-                        ),
+                  ),
                 ),
               ),
             ),
@@ -257,27 +266,6 @@ class _HomeState extends State<Home> {
         ),
         
       ),
-      bottomNavigationBar: BottomNavigationBar(
-       currentIndex: 0, // this will be set when a new tab is tapped
-       items: [
-         BottomNavigationBarItem(
-           icon: Image.asset('assets/home_icon.png', height: 24,),
-           title: Text('Home'),
-         ),
-         BottomNavigationBarItem(
-           icon: Image.asset('assets/course_icon.png', height: 24,),
-           title: Text('Messages'),
-         ),
-         BottomNavigationBarItem(
-           icon: Image.asset('assets/forum_icon.png', height: 24,),
-           title: Text('Forum')
-         ),
-         BottomNavigationBarItem(
-           icon: Image.asset('assets/profile_icon.png', height: 24,),
-           title: Text('Profile')
-         )
-       ],
-     ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/models/bottomnavigatorbar.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/sign_up.dart';
 import 'package:flutter_application_1/theme.dart';
@@ -100,7 +101,7 @@ class SignIn extends StatelessWidget {
                             style: whiteSBTextStyle.copyWith(fontSize: 18),
                           ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> Home()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> BottomNavbar()));
                           },
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.resolveWith<Color>(
