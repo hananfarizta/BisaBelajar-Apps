@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/sign_in.dart';
+import 'package:flutter_application_1/pages/success_signup.dart';
 import 'package:flutter_application_1/theme.dart';
 
 class SignUp3 extends StatelessWidget {
@@ -99,7 +100,7 @@ class SignUp3 extends StatelessWidget {
                             style: whiteSBTextStyle.copyWith(fontSize: 18),
                           ),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> SignIn()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> SuccessSignUp()));
                           },
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.resolveWith<Color>(
