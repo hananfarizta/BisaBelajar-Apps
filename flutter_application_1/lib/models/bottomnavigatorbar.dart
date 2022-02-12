@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/course.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/onboarding3.dart';
 import 'package:flutter_application_1/pages/sign_in.dart';
@@ -16,7 +17,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int currentIndex = 0;
   final screens = [
     Home(),
-    Welcome(),
+    Course(),
     OnBoarding3(),
     SignIn(),
   ];
