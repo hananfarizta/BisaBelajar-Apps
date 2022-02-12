@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/course.dart';
-import 'package:flutter_application_1/pages/tugasdanquiz2.dart';
+import 'package:flutter_application_1/pages/tugasdanquiz.dart';
 import 'package:flutter_application_1/theme.dart';
 
-class TugasDanQuiz extends StatelessWidget {
-  const TugasDanQuiz({ Key? key }) : super(key: key);
+class TugasDanQuiz2 extends StatelessWidget {
+  const TugasDanQuiz2({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,31 +49,12 @@ class TugasDanQuiz extends StatelessWidget {
                   height: 41,
                   child: Column(
                     children: [
-                      Text(
-                        'Tugas',
-                        style: cyanMTextStyle.copyWith(fontSize: 16),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Container(
-                        height: 2,
-                        width: MediaQuery.of(context).size.width/2,
-                        color: cyanColor,
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 41,
-                  child: Column(
-                    children: [
                       InkWell(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TugasDanQuiz2()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TugasDanQuiz()));
                         },
                         child: Text(
-                          'Quiz',
+                          'Tugas',
                           style: greyM2TextStyle.copyWith(fontSize: 16),
                         ),
                       ),
@@ -84,6 +65,25 @@ class TugasDanQuiz extends StatelessWidget {
                         height: 2,
                         width: MediaQuery.of(context).size.width/2,
                         color: greyColor4,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 41,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Quiz',
+                        style: cyanMTextStyle.copyWith(fontSize: 16),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                        height: 2,
+                        width: MediaQuery.of(context).size.width/2,
+                        color: cyanColor,
                       )
                     ],
                   ),
@@ -107,10 +107,10 @@ class TugasDanQuiz extends StatelessWidget {
                   child: Column(
                     children: [
                       Padding(
-            padding: const EdgeInsets.only(left: 285, top: 8),
+            padding: const EdgeInsets.only(left: 320, top: 8),
             child: Text(
-              'Belum Submit',
-              style: redMTextStyle.copyWith(fontSize: 9),
+              '0/5',
+              style: redMTextStyle.copyWith(fontSize: 12),
               textAlign: TextAlign.end,
             ),
               ),
@@ -121,21 +121,21 @@ class TugasDanQuiz extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                'assets/tugas1.png',
+                'assets/quiz1.png',
                 height: 96,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Menggambar dan Mewarnai',
+                    'Berhitung Sederhana',
                     style: blackSB2TextStyle.copyWith(fontSize: 12),
                   ),
                   SizedBox(
                     height: 9,
                   ),
                   Text(
-                    'Menggambar dan mewarnai sesuai dengan\nimajinasimu tentang mainan.',
+                    'Pada Quiz kali ini kalian akan mengerjakan\nsoal sederhana tentang berhitung.',
                     style: greyR4TextStyle.copyWith(fontSize: 9),
                   ),
                   Padding(
@@ -182,57 +182,63 @@ class TugasDanQuiz extends StatelessWidget {
                   child: Column(
                     children: [
                       Padding(
-            padding: const EdgeInsets.only(left: 285, top: 8),
+            padding: const EdgeInsets.only(left: 320, top: 8),
             child: Text(
-              'Tersubmit',
-              style: greenMTextStyle.copyWith(fontSize: 9),
+              '5/5',
+              style: greenMTextStyle.copyWith(fontSize: 12),
               textAlign: TextAlign.end,
             ),
               ),
               SizedBox(
             height: 7,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Padding(
+                padding: const EdgeInsets.only(left: 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
-                'assets/tugas2.png',
-                height: 96,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Membuat Kerajinan Tangan',
-                    style: blackSB2TextStyle.copyWith(fontSize: 12),
-                  ),
-                  SizedBox(
-                    height: 9,
-                  ),
-                  Text(
-                    'Buatlah sebuah kerajinan tangan dari\nbahan apa saja dengan tema bebas.',
-                    style: greyR4TextStyle.copyWith(fontSize: 9),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15, left: 135),
-                    child: Container(
-                      width: 90,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: greyColor2
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Selesai',
-                          style: greySBTextStyle.copyWith(fontSize: 10),
+                Image.asset(
+                  'assets/quiz2.png',
+                  height: 105,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Tebak Warna Dasar',
+                      style: blackSB2TextStyle.copyWith(fontSize: 12),
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    Text(
+                      'Pada Quiz kali ini kalian akan mengerjakan\nsoal sederhana tentang warna dasar.',
+                      style: greyR4TextStyle.copyWith(fontSize: 9),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15, left: 135),
+                      child: Container(
+                        width: 90,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: greyColor2
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Selesai',
+                            style: greySBTextStyle.copyWith(fontSize: 10),
+                          ),
                         ),
                       ),
-                    ),
-                  )
-                ],
-              )
+                    )
+                  ],
+                )
             ],
+                ),
               )
                     ],
                   ),
