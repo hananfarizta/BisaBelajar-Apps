@@ -23,6 +23,7 @@ Color greenColor = Color(0xff5BA41E);
 Color yayasanColor = Color(0xff8E9092);
 Color blueColor = Color(0xff0E70E3);
 Color redColor = Color(0xffFF5031);
+Color red2Color = Color(0xffFF5031);
 
 
 TextStyle blackSBTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, color: blackColor);
