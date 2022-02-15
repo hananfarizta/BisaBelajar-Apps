@@ -3,6 +3,7 @@ import 'package:flutter_application_1/pages/course.dart';
 import 'package:flutter_application_1/pages/forum.dart';
 import 'package:flutter_application_1/pages/home.dart';
 import 'package:flutter_application_1/pages/onboarding3.dart';
+import 'package:flutter_application_1/pages/profile.dart';
 import 'package:flutter_application_1/pages/sign_in.dart';
 import 'package:flutter_application_1/pages/welcome.dart';
 import 'package:flutter_application_1/theme.dart';
@@ -20,7 +21,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
     Home(),
     Course(),
     Forum(),
-    SignIn(),
+    Profile(),
   ];
   @override
   Widget build(BuildContext context) {

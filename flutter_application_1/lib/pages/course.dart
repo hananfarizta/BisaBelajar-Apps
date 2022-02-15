@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/course_lainnya.dart';
+import 'package:flutter_application_1/pages/lihat_kelas.dart';
+import 'package:flutter_application_1/pages/rekap_nilai.dart';
 import 'package:flutter_application_1/pages/tugasdanquiz.dart';
 import 'package:flutter_application_1/theme.dart';
 
@@ -166,29 +168,34 @@ class Course extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Stack(
-                    children: [
-                      Container(
-                      width: 175,
-                      height: 190,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          gradient: LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              colors: [cyanColor.withOpacity(0.2), cyanColor])),
-                      child: Image.asset(
-                        'assets/lihat kelas.png'
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LihatKelas()));
+                    },
+                    child: Stack(
+                      children: [
+                        Container(
+                        width: 175,
+                        height: 190,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [cyanColor.withOpacity(0.2), cyanColor])),
+                        child: Image.asset(
+                          'assets/lihat kelas.png'
+                        ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15, left: 15),
+                        child: Text(
+                          'Lihat Kelas',
+                          style: whiteMTextStyle.copyWith(fontSize: 14),
+                        ),
+                      )
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 15, left: 15),
-                      child: Text(
-                        'Lihat Kelas',
-                        style: whiteMTextStyle.copyWith(fontSize: 14),
-                      ),
-                    )
-                    ],
                   ),
                   Stack(
                     children: [
@@ -232,19 +239,24 @@ class Course extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      Container(
-                            width: 175,
-                            height: 190,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                gradient: LinearGradient(
-                                    begin: Alignment.bottomLeft,
-                                    end: Alignment.topRight,
-                                    colors: [cyanColor.withOpacity(0.2), cyanColor])),
-                            child: Image.asset(
-                              'assets/rekap nilai.png'
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> RekapNilai()));
+                        },
+                        child: Container(
+                              width: 175,
+                              height: 190,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  gradient: LinearGradient(
+                                      begin: Alignment.bottomLeft,
+                                      end: Alignment.topRight,
+                                      colors: [cyanColor.withOpacity(0.2), cyanColor])),
+                              child: Image.asset(
+                                'assets/rekap nilai.png'
+                              ),
                             ),
-                          ),
+                      ),
                           Padding(
                       padding: const EdgeInsets.only(top: 15, left: 15),
                       child: Text(

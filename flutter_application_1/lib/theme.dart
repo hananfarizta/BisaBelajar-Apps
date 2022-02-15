@@ -23,12 +23,11 @@ Color greenColor = Color(0xff5BA41E);
 Color yayasanColor = Color(0xff8E9092);
 Color blueColor = Color(0xff0E70E3);
 Color redColor = Color(0xffFF5031);
-Color red2Color = Color(0xffFF5031);
 
 
 TextStyle blackSBTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, color: blackColor);
 TextStyle blackRTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w400, color: blackColor);
-TextStyle blackSB2TextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: black2Color);
+TextStyle blackSB2TextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, color: black2Color);
 TextStyle blackMTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, color: black2Color);
 TextStyle greyRTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w400, color: greyColor);
 TextStyle greyR2TextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w400, color: greyColor6);
@@ -45,5 +44,7 @@ TextStyle cyanSBTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, col
 TextStyle cyanMTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: cyanColor);
 TextStyle cyanM2TextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: cyan2Color);
 TextStyle yayasanTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: yayasanColor);
+TextStyle yayasanRTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w400, color: yayasanColor);
 TextStyle redMTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: redColor);
+TextStyle redSBTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w600, color: redColor);
 TextStyle greenMTextStyle = GoogleFonts.poppins(fontWeight: FontWeight.w500, color: greenColor);
